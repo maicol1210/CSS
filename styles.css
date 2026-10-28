@@ -1,0 +1,160 @@
+/* =======================================================
+   1. HERENCIA Y VALORES GLOBALES
+   ======================================================= */
+/* La regla body transfiere tipografía y color base a sus hijos (herencia) */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout del contenedor principal */
+.contenedor-principal {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+main {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta-producto {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* =======================================================
+   2. SELECTORES COMBINADOS (AISLAMIENTO POR ZONAS)
+   ======================================================= */
+/* Enlaces dentro del menú del Header */
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Enlaces dentro del Menú del Aside */
+aside ul li a {
+  color: #2c3e50;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+aside ul li a:hover {
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Enlaces del Footer */
+footer ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #ffffff;
+}
+
+/* Estilos de estructura base */
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul,
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  background-color: #1a252f;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* =======================================================
+   3. CASCADA VS ESPECIFICIDAD Y FUNCIONALIDAD DE BOTONES
+   ======================================================= */
+
+/* Estilo base para los botones de compra */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Regla con selector de Clase (Especificidad = 10 pts) */
+.btn-comprar {
+  background-color: #27ae60;
+  color: #ffffff;
+}
+
+.btn-comprar:hover {
+  background-color: #219150;
+}
+
+.btn-comprar:active {
+  transform: scale(0.96);
+  /* Efecto visual de presionado */
+}
+
+/* 
+  PROVOCAR CONFLICTO (Momento 2 de la guía):
+  Descomenta la siguiente regla para observar cómo el ID (100 pts) 
+  sobrescribe a la clase .btn-comprar (10 pts) aunque la clase esté escrita abajo.
+*/
+/*
+#btn-destacado {
+    background-color: #e67e22;
+}
+*/

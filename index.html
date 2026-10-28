@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Productos - Simulador CSS</title>
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado con navegación principal -->
+    <header>
+      <h1>Mi Tienda Virtual</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenido principal y barra lateral -->
+    <div class="contenedor-principal">
+      <!-- Zona Central: Lista de productos -->
+      <main id="productos">
+        <h2>Nuestros Productos</h2>
+        <section class="catalogo">
+          <!-- Producto 1 -->
+          <article class="tarjeta-producto">
+            <h2>Audífonos Bluetooth</h2>
+            <p class="descripcion">
+              Cancelación de ruido activa y batería de 30 horas.
+            </p>
+            <p class="precio">$120.000 COP</p>
+            <a
+              href="#"
+              class="btn btn-comprar"
+              onclick="comprar('Audífonos Bluetooth')"
+              >Comprar ahora</a
+            >
+          </article>
+
+          <!-- Producto 2: Producto Destacado (para probar especificidad) -->
+          <article class="tarjeta-producto">
+            <h2>Teclado Mecánico</h2>
+            <p class="descripcion">
+              Switch azul, retroiluminación RGB configurable.
+            </p>
+            <p class="precio">$250.000 COP</p>
+            <a
+              href="#"
+              class="btn btn-comprar"
+              id="btn-destacado"
+              onclick="comprar('Teclado Mecánico')"
+              >Comprar ahora</a
+            >
+          </article>
+
+          <!-- Producto 3 -->
+          <article class="tarjeta-producto">
+            <h2>Mouse Gamer</h2>
+            <p class="descripcion">
+              Sensor óptico de alta precisión con 16000 DPI.
+            </p>
+            <p class="precio">$85.000 COP</p>
+            <a href="#" class="btn btn-comprar" onclick="comprar('Mouse Gamer')"
+              >Comprar ahora</a
+            >
+          </article>
+
+          <!-- Producto 4 -->
+          <article class="tarjeta-producto">
+            <h2>Monitor 24" 144Hz</h2>
+            <p class="descripcion">Panel IPS con tiempo de respuesta de 1ms.</p>
+            <p class="precio">$780.000 COP</p>
+            <a
+              href="#"
+              class="btn btn-comprar"
+              onclick="comprar('Monitor 24 144Hz')"
+              >Comprar ahora</a
+            >
+          </article>
+        </section>
+      </main>
+
+      <!-- Barra Lateral: Menú secundario de filtros -->
+      <aside>
+        <h2>Categorías</h2>
+        <ul>
+          <li><a href="#" onclick="filtrar('Audio')">Audio</a></li>
+          <li><a href="#" onclick="filtrar('Periféricos')">Periféricos</a></li>
+          <li><a href="#" onclick="filtrar('Pantallas')">Pantallas</a></li>
+          <li><a href="#" onclick="filtrar('Accesorios')">Accesorios</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>
+        &copy; 2026 Mi Tienda Virtual - SENA CIMI. Todos los derechos
+        reservados.
+      </p>
+      <ul class="redes-sociales">
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      </ul>
+    </footer>
+
+    <!-- Script simple para dar funcionalidad a los botones -->
+    <script>
+      function comprar(producto) {
+        alert("¡Gracias por tu interés! Has seleccionado: " + producto);
+      }
+
+      function filtrar(categoria) {
+        alert("Filtrando por la categoría: " + categoria);
+      }
+    </script>
+  </body>
+</html>
