@@ -1,7 +1,51 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+}
+
+:root {
+  --color-primario: #007bff;
+  --color-secundario: #6c757d;
+  --color-fondo: #b8ca18;
+  --color-tarjeta: #14cdd3;
+  --color-texto: #212529;
+
+  --fuente-principal: "Poppins", sans-serif;
+
+  --espaciado-pequeno: 8px;
+  --espaciado-medio: 16px;
+  --espaciado-grande: 24px;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: var(--espaciado-grande);
+}
+
+.catalogo-contenedor {
+  display: grid;
+  gap: var(--espaciado-grande);
+}
+
+.producto-tarjeta {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-secundario);
+
+  padding: var(--espaciado-medio);
+  margin-bottom: var(--espaciado-medio);
+  border-radius: var(--espaciado-pequeno);
+}
+
+.btn-comprar {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: var(--espaciado-pequeno) var(--espaciado-medio);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 header {
@@ -18,11 +62,6 @@ aside {
   background-color: #0f8837;
 }
 
-footer {
-  background-color: #889115;
-  color: rgb(168, 32, 107);
-}
-
 article {
   background-color: #1b80a8;
   border: 1px solid #18a323;
@@ -34,5 +73,9 @@ header {
   background-image: url("./kit-gamer.jpg");
   background-size: cover;
   background-position: right;
+  padding: var(--padding-top) var(--padding-left);
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
+  padding-bottom: var(--padding-botton);
   min-height: 20px;
 }
