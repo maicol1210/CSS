@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catálogo de Productos - Simulador CSS</title>
-    <!-- Vinculación del CSS -->
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Encabezado con navegación principal -->
     <header>
       <h1>Mi Tienda Virtual</h1>
       <nav>
@@ -21,18 +20,13 @@
       </nav>
     </header>
 
-    <!-- Contenido principal y barra lateral -->
     <div class="contenedor-principal">
-      <!-- Zona Central: Lista de productos -->
       <main id="productos">
         <h2>Nuestros Productos</h2>
         <section class="catalogo">
-          <!-- Producto 1 -->
           <article class="tarjeta-producto">
             <h2>Audífonos Bluetooth</h2>
-            <p class="descripcion">
-              Cancelación de ruido activa y batería de 30 horas.
-            </p>
+            <p class="descripcion"></p>
             <p class="precio">$120.000 COP</p>
             <a
               href="#"
@@ -42,7 +36,6 @@
             >
           </article>
 
-          <!-- Producto 2: Producto Destacado (para probar especificidad) -->
           <article class="tarjeta-producto">
             <h2>Teclado Mecánico</h2>
             <p class="descripcion">
@@ -58,7 +51,6 @@
             >
           </article>
 
-          <!-- Producto 3 -->
           <article class="tarjeta-producto">
             <h2>Mouse Gamer</h2>
             <p class="descripcion">
@@ -70,7 +62,6 @@
             >
           </article>
 
-          <!-- Producto 4 -->
           <article class="tarjeta-producto">
             <h2>Monitor 24" 144Hz</h2>
             <p class="descripcion">Panel IPS con tiempo de respuesta de 1ms.</p>
@@ -85,7 +76,6 @@
         </section>
       </main>
 
-      <!-- Barra Lateral: Menú secundario de filtros -->
       <aside>
         <h2>Categorías</h2>
         <ul>
@@ -97,12 +87,8 @@
       </aside>
     </div>
 
-    <!-- Pie de página -->
     <footer>
-      <p>
-        &copy; 2026 Mi Tienda Virtual - SENA CIMI. Todos los derechos
-        reservados.
-      </p>
+      <p>&copy;</p>
       <ul class="redes-sociales">
         <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
         <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
@@ -110,7 +96,6 @@
       </ul>
     </footer>
 
-    <!-- Script simple para dar funcionalidad a los botones -->
     <script>
       function comprar(producto) {
         alert("¡Gracias por tu interés! Has seleccionado: " + producto);

@@ -1,18 +1,15 @@
-# Catálogo de Productos - Jerarquía de Estilos CSS
+## Hallazgos: El Modelo de Caja
 
-Este proyecto corresponde a la **Subactividad 1** del programa de Análisis y Desarrollo de Software (SENA).
+### 1. Diferencia práctica entre Margin y Padding
 
-## Cálculo de Puntos de Especificidad
+- **Padding (Relleno interno):** Es el espacio que se genera **dentro** de la caja, entre el contenido real (texto, imágenes) y su borde. Se usa para dar "oxígeno" y evitar que los textos choquen contra las paredes del contenedor.
+- **Margin (Margen externo):** Es el espacio vacío que se genera **fuera** de la caja, actuando como un "campo de fuerza". Se usa para separar un elemento de sus vecinos y evitar colisiones visuales en la pantalla.
 
-En CSS, el navegador decide qué estilo aplicar a un elemento basándose en el peso de sus selectores:
+### 2. Por qué es obligatorio usar `box-sizing: border-box`
 
-1. **Selector de Etiqueta / Pseudoelemento**: `1 punto` (Ejemplo: `a`, `p`, `h2`)
-2. **Selector de Clase / Atributo / Pseudoclase**: `10 puntos` (Ejemplo: `.btn`, `.btn-comprar`, `:hover`)
-3. **Selector de ID**: `100 puntos` (Ejemplo: `#btn-destacado`)
+Por defecto, el navegador calcula el tamaño total de un elemento sumando el ancho (`width`) + el `padding` + el `border`. Esto hace que los elementos crezcan hacia afuera y rompan el diseño.
+Al usar `box-sizing: border-box`, le ordenamos al navegador que mantenga el tamaño fijo que le dimos y que **comprima el padding y el borde hacia adentro**, garantizando una estructura matemática exacta y predecible.
 
-### Ejemplo práctico:
+### 3. Cómo se ven afectados los elementos hermanos ante un margen grande
 
-- `.btn-comprar` tiene un peso de **10 pts**.
-- `#btn-destacado` tiene un peso de **100 pts**.
-
-Aunque la clase se declare más abajo en el archivo CSS, la regla por ID prevalecerá debido a que posee mayor peso de especificidad. Para mantener un código limpio y fácil de mantener, la buena práctica consiste en refactorizar y trabajar con arquitectura basada en clases simples y compuestas.
+Cuando se le aplica un margen exterior grande a un elemento, este empuja físicamente a sus elementos hermanos (hacia los lados o hacia abajo). Si el espacio total de la pantalla no es suficiente para contenerlos tras el empuje, los elementos hermanos se verán obligados a desplazarse o saltar de línea, alterando la posición de toda la interfaz.
