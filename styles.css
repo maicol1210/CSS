@@ -1,7 +1,4 @@
-/* =======================================================
-   1. HERENCIA Y VALORES GLOBALES
-   ======================================================= */
-/* La regla body transfiere tipografía y color base a sus hijos (herencia) */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #333333;
@@ -76,7 +73,7 @@ aside ul li a:hover {
   font-weight: bold;
 }
 
-/* Enlaces del Footer */
+
 footer ul li a {
   color: #bdc3c7;
   text-decoration: none;
@@ -86,7 +83,7 @@ footer ul li a:hover {
   color: #ffffff;
 }
 
-/* Estilos de estructura base */
+
 header {
   background-color: #2c3e50;
   color: #ffffff;
@@ -118,11 +115,7 @@ footer {
   margin-top: 30px;
 }
 
-/* =======================================================
-   3. CASCADA VS ESPECIFICIDAD Y FUNCIONALIDAD DE BOTONES
-   ======================================================= */
 
-/* Estilo base para los botones de compra */
 .btn {
   display: inline-block;
   padding: 10px 18px;
@@ -133,7 +126,7 @@ footer {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Regla con selector de Clase (Especificidad = 10 pts) */
+
 .btn-comprar {
   background-color: #27ae60;
   color: #ffffff;
@@ -145,16 +138,6 @@ footer {
 
 .btn-comprar:active {
   transform: scale(0.96);
-  /* Efecto visual de presionado */
+ 
 }
 
-/* 
-  PROVOCAR CONFLICTO (Momento 2 de la guía):
-  Descomenta la siguiente regla para observar cómo el ID (100 pts) 
-  sobrescribe a la clase .btn-comprar (10 pts) aunque la clase esté escrita abajo.
-*/
-/*
-#btn-destacado {
-    background-color: #e67e22;
-}
-*/
