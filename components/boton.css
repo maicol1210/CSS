@@ -1,0 +1,20 @@
+.btn-comprar {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: var(--espaciado-pequeno) var(--espaciado-medio);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+btn-comprar:hover {
+  filter: brightness(1.1);
+}
+
+.btn-comprar:active {
+  transform: translateY(2px);
+}
+
+#btn-destacado {
+  background-color: #ff5722;
+}

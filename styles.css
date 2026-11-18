@@ -1,3 +1,7 @@
+@import url("./css/components/menu-lateral.css");
+@import url("./css/components/cards.css");
+@import url("./css/components/boton.css");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,29 +29,6 @@ body {
   padding: var(--espaciado-grande);
 }
 
-.catalogo-contenedor {
-  display: grid;
-  gap: var(--espaciado-grande);
-}
-
-.producto-tarjeta {
-  background-color: var(--color-tarjeta);
-  border: 1px solid var(--color-secundario);
-
-  padding: var(--espaciado-medio);
-  margin-bottom: var(--espaciado-medio);
-  border-radius: var(--espaciado-pequeno);
-}
-
-.btn-comprar {
-  background-color: var(--color-primario);
-  color: white;
-  border: none;
-  padding: var(--espaciado-pequeno) var(--espaciado-medio);
-  font-weight: 600;
-  cursor: pointer;
-}
-
 header {
   background-color: #2c3e50;
 
@@ -58,37 +39,19 @@ main {
   background-color: #f8f9fa;
   padding: var(--espaciado-grande);
 }
-
-
-aside {
-  background-color: #0f8837;
+contenedor-principal {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: var(--espaciado-grande);
+  margin-top: var(--espaciado-grande);
 }
-
-article {
-  background-color: #ffffff; 
-  border: 1px solid #dee2e6;
-  padding: var(--espaciado-medio);
-  margin-bottom: var(--espaciado-medio);
-  border-radius: var(--espaciado-pequeno);
-  position: relative;
-}
-
-.tarjeta-producto p, article p {
-  margin-bottom: 10px;
-}
-
-.precio {
-  font-weight: bold;
-  color: var(--color-primario);
-  font-size: 1.1rem;
-}
-
 header {
   background-image: url("./kit-gamer.jpg");
   background-size: cover;
   background-position: center;
-  padding: 40px  20 px;
-  display: flex;flex-direction: column;
+  padding: 40px 20 px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 15px;
 }
@@ -104,59 +67,4 @@ header nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-}
-
-
-aside ul li a {
-  text-decoration: none;
-  color: var(--color-texto);
-  display: block;
-  padding: var(--espaciado-pequeno);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-aside ul li a:hover {
-  background-color: var(--color-secundario);
-  color: #ffffff;
-}
-
-
-aside ul li a::before {
-  content: "▸ ";
-  color: var(--color-primario);
-}
-
-
-aside ul li a:focus {
-  outline: 2px solid var(--color-secundario);
-  outline-offset: 2px;
-}
-
-
-.btn-comprar:hover {
-  filter: brightness(1.1);
-}
-
-
-.btn-comprar:active {
-  transform: translateY(2px);
-}
-
-
-article {
-  position: relative; 
-}
-
-article::after {
-  content: "¡Oferta!";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ffc107;
-  color: #000;
-  padding: 4px 8px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 4px;
 }

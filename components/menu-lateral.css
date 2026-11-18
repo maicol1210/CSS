@@ -1,0 +1,27 @@
+aside {
+  background-color: #0f8837;
+}
+aside ul li a {
+  text-decoration: none;
+  color: var(--color-texto);
+  display: block;
+  padding: var(--espaciado-pequeno);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+aside ul li a:hover {
+  background-color: var(--color-secundario);
+  color: #ffffff;
+}
+
+aside ul li a::before {
+  content: "▸ ";
+  color: var(--color-primario);
+}
+
+aside ul li a:focus {
+  outline: 2px solid var(--color-secundario);
+  outline-offset: 2px;
+}
