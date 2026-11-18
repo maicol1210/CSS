@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catálogo de Productos - Simulador CSS</title>
 
-    <link rel="preconnect" href="https://googleapis.com" />
-    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -18,69 +18,82 @@
     <link rel="stylesheet" href="./components/boton.css" />
   </head>
   <body>
-    <header>
-      <h1>Mi Tienda Virtual</h1>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#ofertas">Ofertas</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+    <header class="header">
+      <h1 class="header__title">Mi Tienda Virtual</h1>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#inicio" class="header__link">Inicio</a>
+          </li>
+          <li class="header__item">
+            <a href="#productos" class="header__link">Productos</a>
+          </li>
+          <li class="header__item">
+            <a href="#ofertas" class="header__link">Ofertas</a>
+          </li>
+          <li class="header__item">
+            <a href="#contacto" class="header__link">Contacto</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <div class="contenedor-principal">
-      <main id="productos">
-        <h2>Nuestros Productos</h2>
+      <main id="productos" class="catalogo-seccion">
+        <h2 class="catalogo-seccion__title">Nuestros Productos</h2>
         <section class="catalogo">
-          <article class="tarjeta-producto">
-            <h2>Audífonos Bluetooth</h2>
-            <p class="descripcion">
-              Sonido envolvente con cancelacion de ruido activa
+          <article class="card">
+            <h2 class="card__title">Audífonos Bluetooth</h2>
+            <p class="card__description">
+              Sonido envolvente con cancelación de ruido activa
             </p>
-            <p class="precio">$120.000 COP</p>
+            <p class="card__price">$120.000 COP</p>
             <a
               href="#"
-              class="btn btn-comprar"
+              class="btn btn--comprar"
               onclick="comprar('Audífonos Bluetooth')"
               >Comprar ahora</a
             >
           </article>
 
-          <article class="tarjeta-producto">
-            <h2>Teclado Mecánico</h2>
-            <p class="descripcion">
+          <!-- Ejemplo con Modificadores BEM: card--destacada y btn--destacado -->
+          <article class="card card--destacada">
+            <h2 class="card__title">Teclado Mecánico</h2>
+            <p class="card__description">
               Switch azul, retroiluminación RGB configurable.
             </p>
-            <p class="precio">$250.000 COP</p>
+            <p class="card__price">$250.000 COP</p>
             <a
               href="#"
-              class="btn btn-comprar"
-              id="btn-destacado"
+              class="btn btn--comprar btn--destacado"
               onclick="comprar('Teclado Mecánico')"
               >Comprar ahora</a
             >
           </article>
 
-          <article class="tarjeta-producto">
-            <h2>Mouse Gamer</h2>
-            <p class="descripcion">
+          <article class="card">
+            <h2 class="card__title">Mouse Gamer</h2>
+            <p class="card__description">
               Sensor óptico de alta precisión con 16000 DPI.
             </p>
-            <p class="precio">$85.000 COP</p>
-            <a href="#" class="btn btn-comprar" onclick="comprar('Mouse Gamer')"
+            <p class="card__price">$85.000 COP</p>
+            <a
+              href="#"
+              class="btn btn--comprar"
+              onclick="comprar('Mouse Gamer')"
               >Comprar ahora</a
             >
           </article>
 
-          <article class="tarjeta-producto">
-            <h2>Monitor 24" 144Hz</h2>
-            <p class="descripcion">Panel IPS con tiempo de respuesta de 1ms.</p>
-            <p class="precio">$780.000 COP</p>
+          <article class="card">
+            <h2 class="card__title">Monitor 24" 144Hz</h2>
+            <p class="card__description">
+              Panel IPS con tiempo de respuesta de 1ms.
+            </p>
+            <p class="card__price">$780.000 COP</p>
             <a
               href="#"
-              class="btn btn-comprar"
+              class="btn btn--comprar"
               onclick="comprar('Monitor 24 144Hz')"
               >Comprar ahora</a
             >
@@ -88,23 +101,69 @@
         </section>
       </main>
 
-      <aside>
-        <h2>Categorías</h2>
-        <ul>
-          <li><a href="#" onclick="filtrar('Audio')">Audio</a></li>
-          <li><a href="#" onclick="filtrar('Periféricos')">Periféricos</a></li>
-          <li><a href="#" onclick="filtrar('Pantallas')">Pantallas</a></li>
-          <li><a href="#" onclick="filtrar('Accesorios')">Accesorios</a></li>
+      <aside class="menu-lateral">
+        <h2 class="menu-lateral__title">Categorías</h2>
+        <ul class="menu-lateral__list">
+          <li class="menu-lateral__item">
+            <a href="#" class="menu-lateral__link" onclick="filtrar('Audio')"
+              >Audio</a
+            >
+          </li>
+          <li class="menu-lateral__item">
+            <a
+              href="#"
+              class="menu-lateral__link"
+              onclick="filtrar('Periféricos')"
+              >Periféricos</a
+            >
+          </li>
+          <li class="menu-lateral__item">
+            <a
+              href="#"
+              class="menu-lateral__link"
+              onclick="filtrar('Pantallas')"
+              >Pantallas</a
+            >
+          </li>
+          <li class="menu-lateral__item">
+            <a
+              href="#"
+              class="menu-lateral__link"
+              onclick="filtrar('Accesorios')"
+              >Accesorios</a
+            >
+          </li>
         </ul>
       </aside>
     </div>
 
-    <footer>
-      <p>&copy;</p>
-      <ul class="redes-sociales">
-        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+    <footer class="footer">
+      <p class="footer__copy">&copy; 2026 Mi Tienda Virtual</p>
+      <ul class="footer__social-list">
+        <li>
+          <a
+            href="https://facebook.com"
+            class="footer__social-link"
+            target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twitter.com"
+            class="footer__social-link"
+            target="_blank"
+            >Twitter</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://instagram.com"
+            class="footer__social-link"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
       </ul>
     </footer>
 
