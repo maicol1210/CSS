@@ -1,45 +1,44 @@
-catalogo-contenedor {
+.catalogo {
   display: grid;
-  gap: var(--espaciado-grande);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--espaciado-medio);
+  margin-top: var(--espaciado-medio);
 }
 
-.producto-tarjeta {
+.card {
   background-color: var(--color-tarjeta);
   border: 1px solid var(--color-secundario);
-
   padding: var(--espaciado-medio);
-  margin-bottom: var(--espaciado-medio);
-  border-radius: var(--espaciado-pequeno);
-}
-
-article {
-  background-color: #ffffff;
-  border: 1px solid #dee2e6;
-  padding: var(--espaciado-medio);
-  margin-bottom: var(--espaciado-medio);
   border-radius: var(--espaciado-pequeno);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-tarjeta-producto p {
+/* Modificador BEM para la tarjeta destacada */
+.card--destacada {
+  border: 3px solid #ff5722;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: var(--espaciado-pequeno);
+}
+
+.card__description {
   margin-bottom: 10px;
 }
 
-article p {
-  margin-bottom: 10px;
-}
-
-.precio {
+.card__price {
   font-weight: bold;
   color: var(--color-primario);
   font-size: 1.1rem;
+  margin-bottom: 12px;
 }
 
-article {
-  position: relative;
-}
-
-article::after {
+.card::after {
   content: "¡Oferta!";
   position: absolute;
   top: 10px;

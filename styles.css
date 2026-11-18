@@ -1,6 +1,6 @@
-@import url("./css/components/menu-lateral.css");
-@import url("./css/components/cards.css");
-@import url("./css/components/boton.css");
+@import url("./components/menu-lateral.css");
+@import url("./components/cards.css");
+@import url("./components/boton.css");
 
 * {
   box-sizing: border-box;
@@ -13,9 +13,7 @@
   --color-fondo: #b8ca18;
   --color-tarjeta: #14cdd3;
   --color-texto: #212529;
-
   --fuente-principal: "Poppins", sans-serif;
-
   --espaciado-pequeno: 8px;
   --espaciado-medio: 16px;
   --espaciado-grande: 24px;
@@ -25,46 +23,69 @@ body {
   font-family: var(--fuente-principal);
   background-color: var(--color-fondo);
   color: var(--color-texto);
-  margin: 0;
   padding: var(--espaciado-grande);
 }
 
-header {
+/* Encabezado */
+.header {
   background-color: #2c3e50;
-
-  color: white;
-}
-
-main {
-  background-color: #f8f9fa;
-  padding: var(--espaciado-grande);
-}
-contenedor-principal {
-  display: grid;
-  grid-template-columns: 1fr 250px;
-  gap: var(--espaciado-grande);
-  margin-top: var(--espaciado-grande);
-}
-header {
   background-image: url("./kit-gamer.jpg");
   background-size: cover;
   background-position: center;
-  padding: 40px 20 px;
+  color: white;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-header nav ul {
+.header__list {
   list-style: none;
   display: flex;
   gap: 20px;
   padding: 0;
 }
 
-header nav ul li a {
+.header__link {
   color: white;
   text-decoration: none;
   font-weight: 600;
+}
+
+/* Contenedor que pone el catálogo y el menú lateral lado a lado */
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: var(--espaciado-grande);
+  margin-top: var(--espaciado-grande);
+  align-items: start;
+}
+
+.catalogo-seccion {
+  background-color: #f8f9fa;
+  padding: var(--espaciado-grande);
+}
+
+/* Pie de página */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: var(--espaciado-medio);
+  margin-top: var(--espaciado-grande);
+}
+
+.footer__social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin-top: var(--espaciado-pequeno);
+}
+
+.footer__social-link {
+  color: white;
+  text-decoration: none;
 }

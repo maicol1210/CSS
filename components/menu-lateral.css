@@ -1,7 +1,20 @@
-aside {
+.menu-lateral {
   background-color: #0f8837;
+  padding: var(--espaciado-medio);
+  border-radius: var(--espaciado-pequeno);
 }
-aside ul li a {
+
+.menu-lateral__title {
+  color: white;
+  margin-bottom: var(--espaciado-medio);
+}
+
+.menu-lateral__list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral__link {
   text-decoration: none;
   color: var(--color-texto);
   display: block;
@@ -11,17 +24,17 @@ aside ul li a {
     color 0.3s ease;
 }
 
-aside ul li a:hover {
+.menu-lateral__link:hover {
   background-color: var(--color-secundario);
   color: #ffffff;
 }
 
-aside ul li a::before {
+.menu-lateral__link::before {
   content: "▸ ";
   color: var(--color-primario);
 }
 
-aside ul li a:focus {
+.menu-lateral__link:focus {
   outline: 2px solid var(--color-secundario);
   outline-offset: 2px;
 }

@@ -1,20 +1,28 @@
-.btn-comprar {
-  background-color: var(--color-primario);
-  color: white;
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   border: none;
   padding: var(--espaciado-pequeno) var(--espaciado-medio);
   font-weight: 600;
   cursor: pointer;
+  border-radius: 4px;
 }
 
-btn-comprar:hover {
+.btn--comprar {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.btn--destacado {
+  background-color: #ff5722;
+  color: white;
+}
+
+.btn:hover {
   filter: brightness(1.1);
 }
 
-.btn-comprar:active {
+.btn:active {
   transform: translateY(2px);
-}
-
-#btn-destacado {
-  background-color: #ff5722;
 }
